@@ -18,7 +18,7 @@
 				<tbody>
 					@if (count($records) == 0)
 					<tr>
-						<td colspan="3" style="text-align:center;">您还没有任何登陆日志</td>
+						<td colspan="3">您还没有任何登陆日志</td>
 					</tr>
 					@else 
 					<?php $i = 1; ?>
