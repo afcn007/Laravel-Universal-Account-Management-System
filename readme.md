@@ -1,6 +1,7 @@
 ## About Laravel-Universal-Account-Management-System
 
 LUAMS = Laravel 5.4 + Passport 3.0 + AdminLTE 2.4.0 + VUE
+<br>
 LUAMS is a web account system that support OAuth2 authorization.
 
 ## Install
