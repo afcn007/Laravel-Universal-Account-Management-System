@@ -33,6 +33,7 @@
 					@endif
 				</tbody>
 			</table>
+			{{ $records->links() }}
 		</div>
 	</div>
 </section>
