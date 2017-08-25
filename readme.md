@@ -21,6 +21,8 @@ chmod -R 777 bootstrap/cache
 <br>
 chmod -R 777 storage
 <br>
+chmod -R 777 public/upload/
+<br>
 ## Requires
 php > 7.0
 <br>
