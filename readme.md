@@ -13,6 +13,8 @@ copy .env.example .env
 <br>
 php artisan key:generate
 <br>
+php artisan passport:install
+<br>
 php artisan migrate --seed
 <br>
 chmod -R 777 bootstrap/cache
