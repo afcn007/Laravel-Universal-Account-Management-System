@@ -14,11 +14,11 @@ class Avatar {
     {
         $cdnUrl = rtrim(Setting::get('cdn_url', '/'), '/');
         if (!$avatar) {
-            return $cdnUrl . '/' . ltrim(Config::get('auth.default_avatar'), '/');
+            return url($cdnUrl . '/' . ltrim(Config::get('auth.default_avatar'), '/'));
         }
         if (app(UrlGenerator::class)->isValidUrl($avatar)) {
             return $avatar;
         }
-        return $cdnUrl . '/' . ltrim($avatar, '/');
+        return url($cdnUrl . '/' . ltrim($avatar, '/'));
     }
 }

@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/api/getuserinfo', 'UcController@getUserInfo')->middleware('auth:api');
+Route::get('/getuserinfo', 'UcController@getUserInfo')->middleware('auth:api');
