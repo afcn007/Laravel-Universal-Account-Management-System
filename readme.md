@@ -24,7 +24,7 @@ chmod -R 777 storage
 chmod -R 777 public/upload/
 <br>
 ## Requires
-php > 7.0
+php >= 7.1
 <br>
 redis or memcache for cache
 ## Develop
