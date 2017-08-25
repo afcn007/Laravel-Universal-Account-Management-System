@@ -10,8 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Carbon\Carbon;
-use GuzzleHttp\Client;
+
 Route::get('/', [
   'middleware' => ['auth'],
   'uses' => function () {
@@ -23,7 +22,6 @@ Route::get('/', [
 ]);
 
 Auth::routes();
-
 
 Route::group(['prefix'=> '/admin', 'middleware' => ['auth', 'role:admin'], 'namespace' => 'Admin'], function($router){
   $router->get('/', 'AdminController@home');
