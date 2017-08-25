@@ -27,8 +27,10 @@ chmod -R 777 public/upload/
 php > 7.0
 <br>
 redis or memcache for cache
-
-
+## Develop
+Compile js css files
+<br>
+npm run dev
 
 ## License
 
