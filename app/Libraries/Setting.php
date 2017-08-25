@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Libraries;
+
 use DB;
 
-class Setting {
+class Setting
+{
     public static function get($key, $default = '')
     {
         $record = DB::table('setting')->where('key', $key)->first();
@@ -20,13 +22,13 @@ class Setting {
             DB::table('setting')->insert([
                 'key' => $key,
                 'value' => $val
-            ]);
+              ]);
         } else {
-          DB::table('setting')
+            DB::table('setting')
               ->where('key', $key)
               ->update([
-              'value' => $val
-          ]);
+                  'value' => $val
+              ]);
         }
     }
 }

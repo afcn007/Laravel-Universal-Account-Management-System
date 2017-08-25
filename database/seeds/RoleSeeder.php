@@ -13,7 +13,7 @@ class RoleSeeder extends Seeder
     public function run()
     {
         //
-        $owner = new ROle();
+        $owner = new Role();
         $owner->name = 'admin';
         $owner->display_name = '超级管理员'; //optional
         $owner->description = '最该权限'; //optional

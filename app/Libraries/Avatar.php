@@ -1,10 +1,12 @@
 <?php
+
 namespace App\Libraries;
 
 use Config;
 use Illuminate\Routing\UrlGenerator;
 
-class Avatar {
+class Avatar
+{
     /**
     * generate avatar url
     * @param $avatar

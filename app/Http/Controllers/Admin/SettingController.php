@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Http\Controllers\Admin;
 
 use App\Libraries\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class SettingController extends Controller {
+class SettingController extends Controller
+{
     public function show()
     {
         $app_name = Setting::get('app_name');

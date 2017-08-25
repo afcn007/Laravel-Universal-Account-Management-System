@@ -10,6 +10,6 @@ class ClientsController extends Controller
     //
     public function clients()
     {
-    	return view('admin.clients');
+        return view('admin.clients');
     }
 }

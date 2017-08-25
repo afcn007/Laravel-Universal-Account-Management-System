@@ -55,9 +55,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //        
-        //$infos = $request->all();
-        //dd($infos);
         $this->validate($request, [
             'name' => 'required',
             'email' => 'required|email|unique:users',
@@ -144,7 +141,7 @@ class UserController extends Controller
         if (!empty($password)) {
             $user->password = bcrypt($password);
         }
-        if($user->save()) {
+        if ($user->save()) {
             $user->roles()->sync($request->get('roles', []));
             return $this->successReturn(trans("common.edit_success"));
         }
@@ -188,5 +185,4 @@ class UserController extends Controller
     {
         return $this->updateAvatar($id > 0 ? intval($id) : $this->authUser['id']);
     }
-
 }

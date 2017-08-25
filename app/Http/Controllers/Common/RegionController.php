@@ -33,6 +33,5 @@ trait RegionController
             'status' => 0,
             'list' => (new Region())->getByPid($pid, $type)
         ));
-
     }
 }

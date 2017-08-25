@@ -45,7 +45,8 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        if (($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException) && $exception->getStatusCode() == 403){
+        if (($exception instanceof \Symfony\Component\HttpKernel\Exception\HttpException)
+                 && $exception->getStatusCode() == 403) {
             return Response::make('403 您没有权限访问');
         }
         return parent::render($request, $exception);

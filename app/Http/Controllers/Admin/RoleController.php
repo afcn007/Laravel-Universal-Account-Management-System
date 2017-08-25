@@ -123,7 +123,7 @@ class RoleController extends Controller
     }
 
     /**
-    * role permission 
+    * role permission
     *
     * @return \Illuminate\View\View
     */

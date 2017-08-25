@@ -77,5 +77,4 @@ class Controller extends BaseController
     {
         return view()->share($key, $value);
     }
-
 }

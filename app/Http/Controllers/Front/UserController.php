@@ -22,7 +22,6 @@ class UserController extends Controller
         $user = Auth::user();
         $this->getRegionProvinces();
         return view('frontend.user.item', compact('user'));
-
     }
 
     /**
@@ -58,7 +57,7 @@ class UserController extends Controller
         if (!empty($password)) {
             $user->password = bcrypt($password);
         }
-        if($user->save()) {
+        if ($user->save()) {
             $user->roles()->sync($request->get('roles', []));
             return $this->successReturn(trans("common.edit_success"));
         }
