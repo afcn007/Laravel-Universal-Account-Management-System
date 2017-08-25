@@ -46,10 +46,10 @@ stages:
 #PHP 7.0
 php-7.0:
   type: test
-  image: tetraweb/php:7.0
+  image: tetraweb/php:7.1
   script:
     - php -v
-    - echo "Running CS check on PHP 7.0"
+    - echo "Running CS check on PHP 7.1"
     - phpcs --version
     - phpcs -p --standard=PSR2 --ignore="app/helpers.php,app/Libs/,app/Services/" app/
     #- php vendor/bin/phpdoccheck --directory=app
