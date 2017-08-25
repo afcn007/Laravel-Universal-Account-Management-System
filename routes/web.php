@@ -24,13 +24,6 @@ Route::get('/', [
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/test', 'TestController@test')->middleware('auth');
-Route::get('/test2', function(){
-	$a = new Client();
-  $response = $a->get('http://dev.passport.com/api/user');
-});
 
 Route::group(['prefix'=> '/admin', 'middleware' => ['auth', 'role:admin'], 'namespace' => 'Admin'], function($router){
   $router->get('/', 'AdminController@home');
