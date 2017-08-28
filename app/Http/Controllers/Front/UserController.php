@@ -58,7 +58,6 @@ class UserController extends Controller
             $user->password = bcrypt($password);
         }
         if ($user->save()) {
-            $user->roles()->sync($request->get('roles', []));
             return $this->successReturn(trans("common.edit_success"));
         }
         return $this->successReturn(trans("common.edit_fail"));
